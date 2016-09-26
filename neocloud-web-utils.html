@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`neocloud-web-utils`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="neocloud-web-utils">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Function formatDate [[formatDate("2016-09-20T11:30:44")]]</h2>
+    <h2>Function formatPrice [[formatPrice(354635.25)]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'neocloud-web-utils',
+
+      formatDate: function(date) {
+
+        var dateact = new Date(date)
+
+        dateact = dateact.toLocaleTimeString();
+        return dateact;
+      },
+      formatPrice: function(price) {
+        price = price.toString().replace(".",",");
+        price = price.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        return price;
+
+      }
+
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>neocloud-web-utils test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../neocloud-web-utils.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <neocloud-web-utils></neocloud-web-utils>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('neocloud-web-utils', function() {
+
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'neocloud-web-utils');
+        });
+
+      });
+    </script>
+  </body>
+</html>
