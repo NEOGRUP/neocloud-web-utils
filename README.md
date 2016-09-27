@@ -1,5 +1,6 @@
 # \<neocloud-web-utils\>
 
+Neocloud library functions for use in web projects.
 
 Example:
 
